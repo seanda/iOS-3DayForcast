@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__Day_Forcast" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="HOE-1D-2k2">
+                                <rect key="frame" x="0.0" y="0.0" width="611" height="600"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="82" translatesAutoresizingMaskIntoConstraints="NO" id="tbH-PW-h56">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="D7Q-wo-NFm"/>
+                                </constraints>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="23"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Weather Forecast" id="cHg-LA-VHy"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g. Victoria, San Francisco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oXG-xv-BxR">
+                                <rect key="frame" x="199" y="136" width="202" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="LkB-hN-3zp"/>
+                                    <constraint firstAttribute="height" constant="30" id="jU1-Ic-K4Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="searchCityClick:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="oTB-5v-3jc"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxm-ss-NR6">
+                                <rect key="frame" x="242" y="174" width="117" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="S28-ty-Nhz"/>
+                                    <constraint firstAttribute="width" constant="117" id="bqz-HC-6TW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                <state key="normal" title="Forcast"/>
+                                <connections>
+                                    <action selector="getForcast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NEm-eY-bNk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type in the city to get the Forecast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BD-Hx-Pb1">
+                                <rect key="frame" x="20" y="82" width="560" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="FIP-yM-VIp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQ6-jY-VqU">
+                                <rect key="frame" x="20" y="212" width="560" height="100"/>
+                                <color key="backgroundColor" red="0.60223966839999998" green="0.58399903769999995" blue="0.55871832369999996" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IDU-50-YeR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IQ6-jY-VqU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="26R-eH-qQf"/>
+                            <constraint firstItem="8BD-Hx-Pb1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2xf-iO-1tR"/>
+                            <constraint firstItem="tbH-PW-h56" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5tL-Fg-eZZ"/>
+                            <constraint firstItem="oXG-xv-BxR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9o0-5H-r89"/>
+                            <constraint firstItem="8BD-Hx-Pb1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HK0-pB-63G"/>
+                            <constraint firstItem="oXG-xv-BxR" firstAttribute="top" secondItem="8BD-Hx-Pb1" secondAttribute="bottom" constant="16" id="JK6-gt-fBc"/>
+                            <constraint firstItem="HOE-1D-2k2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="LOL-Gk-Z1u"/>
+                            <constraint firstItem="8BD-Hx-Pb1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LzI-rj-3GQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HOE-1D-2k2" secondAttribute="trailing" constant="-31" id="NoA-hK-KV0"/>
+                            <constraint firstItem="HOE-1D-2k2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="WJA-lz-trp"/>
+                            <constraint firstItem="tbH-PW-h56" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YM8-fd-ZkP"/>
+                            <constraint firstItem="8BD-Hx-Pb1" firstAttribute="top" secondItem="tbH-PW-h56" secondAttribute="bottom" constant="17" id="cpl-32-HlL"/>
+                            <constraint firstItem="IQ6-jY-VqU" firstAttribute="top" secondItem="Lxm-ss-NR6" secondAttribute="bottom" constant="8" id="iuL-vi-PnS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HOE-1D-2k2" secondAttribute="bottom" id="mdo-nY-9XW"/>
+                            <constraint firstItem="Lxm-ss-NR6" firstAttribute="top" secondItem="oXG-xv-BxR" secondAttribute="bottom" constant="8" id="oAs-D5-89U"/>
+                            <constraint firstItem="IQ6-jY-VqU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="q1k-Ez-wKH"/>
+                            <constraint firstItem="tbH-PW-h56" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="qos-PV-rJa"/>
+                            <constraint firstItem="Lxm-ss-NR6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sJQ-3o-B91"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tbH-PW-h56" secondAttribute="trailing" constant="-20" id="wqi-zx-rE5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="forecastLabel" destination="IQ6-jY-VqU" id="DaR-uT-LBu"/>
+                        <outlet property="searchCity" destination="oXG-xv-BxR" id="wxa-AM-Cth"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310" y="386"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.png" width="1280" height="853"/>
+    </resources>
+</document>
